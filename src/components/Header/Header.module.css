@@ -1,0 +1,49 @@
+.header{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 10px 0;
+    background-color: #030382;
+    color: white;
+    z-index: 100;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+@media(max-width: 680px){
+    .header{
+        justify-content: center;
+        flex-direction: column;
+    }
+}
+
+.startSection{
+    flex-basis: 12%;
+    padding-left: 1%;
+    height: 100%;
+    min-width: 130px;
+    flex-wrap: wrap;
+    max-width: 188px;
+}
+
+.midSection{
+    flex-basis: 60%;
+}
+
+.endSection{
+    flex-basis: 18%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.endSection > div{
+    width: 20%;
+    height: 100%;
+    margin: 2%;
+    text-align: center;
+    font-size: 40px;
+}

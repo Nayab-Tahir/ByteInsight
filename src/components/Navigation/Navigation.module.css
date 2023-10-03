@@ -1,0 +1,32 @@
+.nav{
+    list-style: none;
+    margin: 0;
+    padding: 0.5rem 3rem 0 3rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    align-content: center;
+}
+
+.nav > li{
+    height: 3rem;
+    width: 98px;
+    justify-content: center;
+    font-size: 1.5rem;
+    display: flex;
+    align-items: center;
+}
+
+@media(max-width:1305px){
+    .nav > li{
+        flex-basis: 22%;
+    }
+}
+
+@media(max-width:680px){
+    .nav > li{
+        flex-basis: 90%;
+        height: 2rem;
+    }
+}
