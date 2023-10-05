@@ -1,7 +1,7 @@
 .nav{
     list-style: none;
     margin: 0;
-    padding: 0.5rem 3rem 0 3rem;
+    padding: 0 3rem 0 3rem;
     display: flex;
     align-items: center;
     justify-content: space-around;
