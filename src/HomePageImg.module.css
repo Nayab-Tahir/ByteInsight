@@ -1,0 +1,16 @@
+.imageContainer{
+    position: relative;
+    width: 100%;
+    top: 100%;
+    left: 0;
+    overflow: hidden;
+    height: 25rem;
+    background-color: #191970;
+    z-index: 2;
+}
+
+.homeImg{
+    z-index: 1;
+    width: 100%;
+    opacity: 0.3;
+}

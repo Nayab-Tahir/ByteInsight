@@ -5,9 +5,9 @@ import Icon from "./Icon";
 
 const Icons = () => {
   return <>
-    <Icon iconImage={IconEmail} alt="" />
-    <Icon iconImage={IconGithub} alt="" />
-    <Icon iconImage={IconLinkedin} alt="" />
+    <Icon iconImage={IconGithub} alt="" address="https://www.github.com/Nayab-Tahir" />
+    <Icon iconImage={IconLinkedin} alt="" address="https://www.linkedin.com/in/nayab-tahir" />
+    <Icon iconImage={IconEmail} alt="" address="mailto:nayabtahir321@gmail.com" />
   </>
 }
 
