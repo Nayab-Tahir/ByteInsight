@@ -35,18 +35,24 @@
 }
 
 .endSection{
-    flex-basis: 18%;
+    flex-basis: 13%;
+    height: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
-.endSection > div{
-    width: 33%;
-    height: 100%;
-    text-align: center;
-    font-size: 40px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+@media(max-width:807px){
+  .endSection{
+    flex-direction: column;
+    align-items: flex-end;
+    padding: 7px 7px 7px 0;
+  }
+}
+
+@media(max-width:680px){
+  .endSection{
+    flex-direction: row;
+    justify-content: space-around;
+  }
 }

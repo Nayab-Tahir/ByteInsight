@@ -1,7 +1,7 @@
 import classes from "./Header.module.css";
-import Logo from "./../Logo/Logo";
-import Nav from "./../Navigation/Navigation";
-import IconGithub from "./IconGithub.svg";
+import Logo from "./Logo/Logo";
+import Nav from "./Navigation/Navigation";
+import Icons from "./Icons/Icons";
 
 const Header = () => {
   return (
@@ -13,9 +13,7 @@ const Header = () => {
         <Nav />
       </div>
       <div className={classes.endSection}>
-        <div>1</div>
-        <div>2</div>
-        <div><img src={IconGithub} alt="" height="50rem" /></div>
+        <Icons />
       </div>
     </header>
   );

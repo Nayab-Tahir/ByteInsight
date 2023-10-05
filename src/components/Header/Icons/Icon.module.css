@@ -1,0 +1,28 @@
+
+.icon{
+    flex-basis: 33%;
+    height: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin: 0 5px;
+}
+
+.iconImage{
+  height: 3rem;
+}
+
+@media(max-width:807px){
+  .icon{
+    margin: 0.3rem 0.5rem;
+  }
+  .iconImage{
+    height: 2rem;
+  }
+}
+
+@media(max-width:680px){
+  .iconImage{
+    height: 2.5rem;
+  }
+}

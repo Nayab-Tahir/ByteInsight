@@ -21,10 +21,14 @@
 @media(max-width:1305px){
     .nav > li{
         flex-basis: 22%;
+        white-space: nowrap;
     }
 }
 
 @media(max-width:680px){
+    .nav{
+        padding-top: 1rem;
+      }
     .nav > li{
         flex-basis: 90%;
         height: 2rem;
