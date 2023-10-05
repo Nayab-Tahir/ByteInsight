@@ -13,13 +13,6 @@
     flex-wrap: wrap;
 }
 
-@media(max-width: 680px){
-    .header{
-        justify-content: center;
-        flex-direction: column;
-    }
-}
-
 .startSection{
     flex-basis: 12%;
     padding-left: 1%;
@@ -29,9 +22,20 @@
     max-width: 188px;
 }
 
+@media(max-width: 680px){
+    .header{
+        justify-content: center;
+        flex-direction: column;
+    }
+    .startSection{
+      min-width: 110px;
+      width: 110px;
+    }
+}
+
 .midSection{
     flex-basis: 60%;
-    padding-top: 1%;
+    padding-top: 0.8%;
 }
 
 .endSection{

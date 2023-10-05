@@ -9,7 +9,7 @@
 }
 
 .iconImage{
-  height: 3rem;
+  height: 2.5rem;
 }
 
 @media(max-width:807px){
@@ -17,12 +17,12 @@
     margin: 0.3rem 0.5rem;
   }
   .iconImage{
-    height: 2rem;
+    height: 1.7rem;
   }
 }
 
 @media(max-width:680px){
   .iconImage{
-    height: 2.5rem;
+    height: 2rem;
   }
 }
