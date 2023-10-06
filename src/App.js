@@ -1,14 +1,11 @@
 import Header from "./components/Header/Header";
-import HomePageImg from "./HomePageImg.jpg";
-import classes from "./HomePageImg.module.css";
+import Background from "./components/Background/Background";
 
 function App() {
   return (
     <>
       <Header />
-      <div className={classes.imageContainer}>
-        <img src={HomePageImg} alt="" className={classes.homeImg} />
-      </div>
+      <Background/>
     </>
   );
 }
