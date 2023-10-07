@@ -6,7 +6,9 @@
 .homeCardsContainer{
     padding: 3.3% 3.3% 0% 3.3%;
     display: flex;
-    justify-content: space-between;
+    /* justify-content: space-between; */
+    justify-content: flex-start;
+    overflow: hidden;
 }
 
 .homeCard{
@@ -19,6 +21,8 @@
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+    /* transition: transform 0.5s ease; */
+    margin: 0 20px;
 }
 
 .homeCardTitle{
@@ -35,6 +39,49 @@
     color: navy;
 }
 
-.homeCard.removed{
-    transform: scale(0);
+@keyframes removeCard0 {
+    0% {
+        transform: translateY(0);
+    }
+    100% {
+        transform: translateY(100%);
+    }
+}
+
+@keyframes moveCard1and2 {
+    0% {
+        transform: translateX(0);
+    }
+    100% {
+        transform: translateX(-110%);
+    }
+}
+
+.card0{
+    animation: removeCard0 1s ease 3s forwards;
+}
+
+.card1{
+    animation: moveCard1and2 1s ease 3s forwards;
+}
+
+.card2{
+    /* transform: translate(0, 0);
+    position: relative;
+    right: 0;
+    top: 375px; */
+    animation: moveCard1and2 1s ease 3s forwards;
+}
+
+@keyframes reset{
+    0% {
+        transform: translate(0, 0);
+    }
+    100% {
+        transform: translate(0, 0);
+    }
+}
+
+.resetCards{
+    animation: reset 0.01 ease 0s forwards;
 }
