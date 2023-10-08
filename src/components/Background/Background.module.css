@@ -1,29 +1,100 @@
-.background{
-    position: relative;
-    width: 100%;
-    top: 0;
-    left: 0;
-    overflow: hidden;
-    height: 22vw;
-    z-index: 2;
+.background {
+  position: relative;
+  width: 100%;
+  top: 0;
+  left: 0;
+  overflow: hidden;
+  height: 22vw;
+  z-index: 2;
 }
 
-.image{
-    z-index: 1;
-    width: 100%;
-    height: 100%;
-    opacity: 0.2;
+.image {
+  z-index: 1;
+  width: 100%;
+  height: 100%;
+  opacity: 0.2;
 }
 
-.quote{
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    text-align: center;
-    color: #030382;
-    font-family: sans-serif;
-    font-size: 4vw;
-    width: 70%;
-    margin: 0;
+.intro {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  /* text-align: center; */
+  color: #030382;
+  font-family: sans-serif;
+  /* font-weight: bold;
+    font-size: 4vw; */
+  width: 70%;
+  margin: 0;
+}
+
+.name {
+  margin: 0;
+  margin-top: -7px;
+  font-size: 4vw;
+}
+
+.greetings {
+  margin: 0;
+  margin-left: 4px;
+  display: flex;
+  align-items: center;
+}
+
+.introHead {
+  margin: 0;
+  margin-left: 4px;
+  margin-top: 5px;
+  display: flex;
+  align-items: center;
+}
+
+.introHead > em {
+  font-size: 2vw;
+  font-style: normal;
+  margin: 0 0 1.5px 7px;
+}
+
+.introPara {
+  width: 50%;
+  text-align: justify;
+  margin: 0;
+  margin-left: 4px;
+}
+
+.typingContainer {
+  position: relative;
+  font-size: 24px;
+  color: navy;
+  white-space: nowrap;
+  overflow: hidden;
+}
+
+@keyframes typing {
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+.typingText {
+  display: inline-block;
+  margin-right: 10px;
+}
+
+@keyframes cursorBlink {
+  0% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+}
+
+.typingCursor {
+  display: inline-block;
+  width: 10px;
+  height: 24px;
+  background-color: navy;
+  animation: cursorBlink 1s step-end infinite;
 }
