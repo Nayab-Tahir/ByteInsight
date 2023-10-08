@@ -34,10 +34,13 @@ const Background = () => {
         eraseText();
       } else {
         clearInterval(typeErase);
-        setTextIndex((prevTextIndex) => (prevTextIndex + 1) % textArray.length);
-        setIsTyping(true);
+        setTimeout(() => {
+          setTextIndex((prevTextIndex) => (prevTextIndex + 1) % textArray.length);
+          setIsTyping(true);
+          setInterval(typeErase);
+        }, 500);
       }
-    }, 100);
+    }, 70);
 
     return () => clearInterval(typeErase);
   }, [textIndex, charIndex, isTyping, typeText, eraseText]);
@@ -51,7 +54,7 @@ const Background = () => {
         </h3>
         <h1 className={classes.name}>Nayab Tahir</h1>
         <h3 className={classes.introHead}>
-          I am{" "}
+          I am
           <em>
             <div className={classes.typingContainer}>
               <span className={classes.typingText}>{text}</span>

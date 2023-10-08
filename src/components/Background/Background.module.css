@@ -6,6 +6,7 @@
   overflow: hidden;
   height: 22vw;
   z-index: 2;
+  min-height: 195px;
 }
 
 .image {
@@ -65,7 +66,7 @@
 
 .typingContainer {
   position: relative;
-  font-size: 24px;
+  /* font-size: 24px; */
   color: navy;
   white-space: nowrap;
   overflow: hidden;
@@ -94,7 +95,7 @@
 .typingCursor {
   display: inline-block;
   width: 10px;
-  height: 24px;
+  height: 2vw;
   background-color: navy;
   animation: cursorBlink 1s step-end infinite;
 }
