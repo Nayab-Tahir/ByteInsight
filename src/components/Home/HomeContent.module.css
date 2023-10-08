@@ -6,7 +6,6 @@
 .homeCardsContainer{
     padding: 3.3% 3.3% 0% 3.3%;
     display: flex;
-    /* justify-content: space-between; */
     justify-content: flex-start;
     overflow: hidden;
 }
@@ -41,14 +40,19 @@
 
 @keyframes removeCard0 {
     0% {
+        opacity: 1;
         transform: translateY(0);
+    }
+    50% {
+        opacity: 0;
+        transform: translateY(100%);
     }
     100% {
         transform: translateY(100%);
     }
 }
 
-@keyframes moveCard1and2 {
+@keyframes moveCard1 {
     0% {
         transform: translateX(0);
     }
@@ -57,31 +61,38 @@
     }
 }
 
+@keyframes animateCard2 {
+    0% {
+        opacity: 0;
+        transform: translateY(0);
+    }
+    20% {
+        opacity: 1;
+        transform: translateY(-100%);
+    }
+    80% {
+        transform: translateY(-100%);
+    }
+    100% {
+        transform: translate(-110%, -100%);
+    }
+}
+
 .card0{
-    animation: removeCard0 1s ease 3s forwards;
+    animation: removeCard0 2s ease 3s forwards;
 }
 
 .card1{
-    animation: moveCard1and2 1s ease 3s forwards;
+    animation: moveCard1 1s ease 4s forwards;
 }
 
 .card2{
-    /* transform: translate(0, 0);
     position: relative;
     right: 0;
-    top: 375px; */
-    animation: moveCard1and2 1s ease 3s forwards;
+    top: 376px;
+    animation: animateCard2 5s ease 0s forwards;
 }
 
-@keyframes reset{
-    0% {
-        transform: translate(0, 0);
-    }
-    100% {
-        transform: translate(0, 0);
-    }
-}
-
-.resetCards{
-    animation: reset 0.01 ease 0s forwards;
+.resetCardAnimations{
+    transform: none;
 }

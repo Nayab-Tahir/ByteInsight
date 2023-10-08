@@ -5,37 +5,40 @@ import { useEffect, useState } from "react";
 const CARD_LIST = ["Card no 1", "Card no 2", "Card no 3", "Card no 4"];
 
 const HomeContent = () => {
-  const [currIndex, setCurrIndex] = useState(0);
-  const [displayedCards, setDisplayedCards] = useState([]);
+  const [currIndex, setCurrIndex] = useState(3);
+  const [isAnimating, setIsAnimating] = useState(false);
+  const [displayedCards, setDisplayedCards] = useState([
+    CARD_LIST[0],
+    CARD_LIST[1],
+    CARD_LIST[2],
+  ]);
 
   useEffect(() => {
-    setDisplayedCards((prevDisplayedCards) => {
-      const newDisplayedCards = prevDisplayedCards;
-      newDisplayedCards.push(CARD_LIST[currIndex]);
-      return newDisplayedCards;
-    });
-  }, [displayedCards.length, currIndex]);
+    const interval = setInterval(() => {
+      setDisplayedCards((prevDisplayedCards) => {
+        const newDisplayedCards = [...prevDisplayedCards];
+        newDisplayedCards.shift();
+        newDisplayedCards.push(CARD_LIST[currIndex]);
+        setCurrIndex((prevIndex) => ((prevIndex + 1) % 4));
+        return newDisplayedCards;
+      });
+    }, 5000);
 
-  useEffect(() => {
-    setDisplayedCards((prevDisplayedCards) => {
-      const newDisplayedCards = prevDisplayedCards;
-      newDisplayedCards.push(CARD_LIST[1]);
-      newDisplayedCards.push(CARD_LIST[2]);
-      return newDisplayedCards;
-    });
-    setCurrIndex(2);
-  }, []);
+    return () => clearInterval(interval);
+  }, [currIndex]);
 
-  const removeCardHandler = () => {
-    setDisplayedCards((prevDisplayedCards) => {
-      return prevDisplayedCards.slice(1);
-    });
-    setCurrIndex((prevIndex) => (prevIndex + 1) % CARD_LIST.length);
-  }
+  const resetAnimationHandler = () => {
+    setIsAnimating(false);
+  };
 
   return (
     <div className={classes.homeContentSection}>
-      <HomeCardsDisplay currIndex={currIndex} displayedCards={displayedCards} removeCard={removeCardHandler} />
+      <HomeCardsDisplay
+        currIndex={currIndex}
+        displayedCards={displayedCards}
+        resetAnimation={resetAnimationHandler}
+        isAnimating={isAnimating}
+      />
     </div>
   );
 };
