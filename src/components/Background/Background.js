@@ -35,7 +35,9 @@ const Background = () => {
       } else {
         clearInterval(typeErase);
         setTimeout(() => {
-          setTextIndex((prevTextIndex) => (prevTextIndex + 1) % textArray.length);
+          setTextIndex(
+            (prevTextIndex) => (prevTextIndex + 1) % textArray.length
+          );
           setIsTyping(true);
           setInterval(typeErase);
         }, 500);
@@ -49,9 +51,7 @@ const Background = () => {
     <div className={classes.background}>
       <img src={Image} alt="" className={classes.image} />
       <div className={classes.intro}>
-        <h3 className={classes.greetings}>
-          <i>Hi, my name is</i>
-        </h3>
+        <h3 className={classes.greetings}>Hi, my name is</h3>
         <h1 className={classes.name}>Nayab Tahir</h1>
         <h3 className={classes.introHead}>
           I am

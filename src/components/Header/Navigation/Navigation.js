@@ -9,8 +9,8 @@ const Navigation = () => {
                 <li>Projects</li>
                 <li>Todos</li>
                 <li>Notes</li>
-                <li>FunWay</li>
-                <li>About Me</li>
+                <li>Funway</li>
+                <li>AboutMe</li>
             </ul>
         </nav>
     );
