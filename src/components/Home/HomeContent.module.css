@@ -93,6 +93,16 @@
     animation: animateCard2 5s ease 0s forwards;
 }
 
-.resetCardAnimations{
-    transform: none;
+@keyframes hoveredCardAnimation{
+    0%{
+
+    }
+    100%{
+      transform: translateY(-9%);
+    }
+}
+
+.hoveredCard{
+    animation: hoveredCardAnimation 0.5s ease 0.1s forwards;
+    z-index: 20;
 }

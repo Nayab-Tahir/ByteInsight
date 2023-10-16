@@ -1,19 +1,22 @@
 import classes from "./HomeContent.module.css";
 
 const HomeCard = (props) => {
-  let className = "";
-  if (props.index === 0) className = classes.card0;
-  else if (props.index === 1) className = classes.card1;
-  else className = classes.card2;
+  let cardClass = "";
+  if(!props.isAnimating && props.index !== props.hoveredIndex) cardClass = "";
+  else if(props.index === props.hoveredIndex) cardClass = classes.hoveredCard;
+  else if (props.index === 0) cardClass = classes.card0;
+  else if (props.index === 1) cardClass = classes.card1;
+  else cardClass = classes.card2;
 
   const hoverHandler = () => {
-    className = "";
+    props.toggleAnimation(props.index);
   };
 
   return (
     <div
-      className={`${classes.homeCard} ${className} ${classes.resetCardAnimations}`}
+      className={`${classes.homeCard} ${cardClass}`}
       onMouseEnter={hoverHandler}
+      onMouseLeave={hoverHandler}
     >
       <h2 className={classes.homeCardTitle}>{props.name}</h2>
       <p className={classes.homeCardBody}>
