@@ -6,12 +6,14 @@ const HomeCard = (props) => {
   else if (props.index === 1) className = classes.card1;
   else className = classes.card2;
 
+  const hoverHandler = () => {
+    className = "";
+  };
+
   return (
     <div
-      className={`${classes.homeCard} ${className} ${
-        props.isAnimating ? classes.resetCardAnimations : ""
-      }`}
-      onAnimationEnd={props.resetAnimation}
+      className={`${classes.homeCard} ${className} ${classes.resetCardAnimations}`}
+      onMouseEnter={hoverHandler}
     >
       <h2 className={classes.homeCardTitle}>{props.name}</h2>
       <p className={classes.homeCardBody}>

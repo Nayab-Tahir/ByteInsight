@@ -6,7 +6,6 @@ const CARD_LIST = ["Card no 1", "Card no 2", "Card no 3", "Card no 4"];
 
 const HomeContent = () => {
   const [currIndex, setCurrIndex] = useState(3);
-  const [isAnimating, setIsAnimating] = useState(false);
   const [displayedCards, setDisplayedCards] = useState([
     CARD_LIST[0],
     CARD_LIST[1],
@@ -27,17 +26,11 @@ const HomeContent = () => {
     return () => clearInterval(interval);
   }, [currIndex]);
 
-  const resetAnimationHandler = () => {
-    setIsAnimating(false);
-  };
-
   return (
     <div className={classes.homeContentSection}>
       <HomeCardsDisplay
         currIndex={currIndex}
         displayedCards={displayedCards}
-        resetAnimation={resetAnimationHandler}
-        isAnimating={isAnimating}
       />
     </div>
   );

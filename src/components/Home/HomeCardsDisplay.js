@@ -10,8 +10,6 @@ const HomeCardsDisplay = (props) => {
               name={cardName}
               index={index}
               key={props.currIndex + index}
-              resetAnimation={props.resetAnimation}
-              isAnimating={props.isAnimating}
             />
         ))
         }
